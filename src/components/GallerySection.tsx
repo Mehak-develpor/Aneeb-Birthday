@@ -81,21 +81,6 @@ export default function GallerySection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Note about photos */}
-        <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 1 }}
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/5 border border-gold-500/20">
-            <Camera className="w-4 h-4 text-gold-500/60" />
-            <p className="text-sm text-gray-500">
-              Replace these with Aneeb&apos;s actual photos
-            </p>
-          </div>
-        </motion.div>
       </div>
 
       {/* Lightbox */}
