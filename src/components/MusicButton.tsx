@@ -15,10 +15,7 @@ export default function MusicButton() {
 
   const toggleMusic = () => {
     if (!audioRef.current) {
-      // Create audio element with a placeholder
-      audioRef.current = new Audio();
-      // Note: User should replace this URL with actual birthday song
-      audioRef.current.src = '';
+      audioRef.current = new Audio('/music/birthday.mp3');
       audioRef.current.loop = true;
     }
 
@@ -26,9 +23,7 @@ export default function MusicButton() {
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
-      // Since we don't have an actual audio file, we'll just toggle the visual state
-      // In production, user should add: audioRef.current.play().then(() => setIsPlaying(true))
-      setIsPlaying(true);
+      audioRef.current.play().then(() => setIsPlaying(true)).catch(console.error);
     }
   };
 
