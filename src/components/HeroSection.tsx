@@ -24,6 +24,7 @@ export default function HeroSection() {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-35 z-0 pointer-events-none"
+        style={{ objectPosition: 'center top' }}
       >
         <source src="/hero-bg.mp4" type="video/mp4" />
       </video>
